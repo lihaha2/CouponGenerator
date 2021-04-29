@@ -1,0 +1,151 @@
+html, body{
+    background-color: #557F73;
+    height: 98vh;
+}
+
+button, a{
+    display: block;
+    color:#ECD47B ;
+    background-color: #DD5639;
+    padding: 1rem;
+    border-radius: 4px;
+    font-family: monospace;
+    font-weight: 700;
+    font-size: 20px;
+    border: 0px;
+    cursor: pointer;
+    transition: transform 1s;
+}
+
+span{
+    transition: transform 1s;
+}
+
+button:hover, button:hover span, a:hover, a:hover span{
+    transform: scale(0.98);
+}
+
+button:active, button:active span, a:active, a:active span{
+    transition: transform 0s;
+    transform: scale(0.95);
+}
+
+input, select {
+    transition: border 1s;
+    outline: none;
+    font-size: 14px;
+    width: 90%;
+    padding: 10px;
+    border: 2px solid #D8C136;
+    border-radius: 4px;
+    font-family: monospace;
+    font-weight: 700;
+    color: black;
+    margin: 0 0 15px;
+}
+
+input:hover, input:focus{
+    border: 2px solid #557F73;
+}
+
+select{
+    width: 100%;
+    padding: 10px 10px 10px 5px;
+}
+
+#root{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100%;
+}
+
+.cupon__wrapper{
+    margin: 0 0 1rem 0;
+    transition: filter 1s;
+    background-color: #dd5639;
+}
+
+.cupon__wrapper--disabled {
+    filter: contrast(0.5);
+}
+
+.cupon {
+    min-height: 60px;
+    max-width: 400px;
+    word-break: break-word;
+    position: relative;
+    margin: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: max-content;
+    padding: 2rem;
+    border: 2px dashed #D8C136;
+    background-color: #dd5639;
+    color: white;
+}
+
+.cupon__title{
+    font-size: 20px;
+    font-weight: 600;
+    font-family: monospace;
+}
+
+.cupon__badge{
+    font-size: 10px;
+    font-weight: 400;
+    max-width: 400px;
+    font-family: monospace;
+}
+
+.err{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: #ECD47B;
+    padding: 1rem;
+    border-radius: 4px;
+    color: #DD5639;
+    font-family: monospace;
+    font-weight: 700;
+    font-size: 20px;
+    border: 0px;
+    max-width: 273px;
+}
+
+.result{
+    padding: 2rem 0 0 0;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.result a{
+    word-break: break-all;
+    background-color: transparent;
+    color: #557F73;
+    padding: 0;
+}
+.result a:hover{
+    transform: none;
+}
+
+.result button{
+    margin: 1rem 0 0 0;
+}
+
+@media(max-width: 400px){
+    .cupon {
+        width: auto;
+    }
+    #root {
+        justify-content: flex-start;
+    }
+    .cupon__wrapper {
+        margin: 0 0 1rem 0;
+    }
+}
